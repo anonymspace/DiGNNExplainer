@@ -5,7 +5,7 @@ Heterogeneous Graph Neural Networks</strong>, we explain GNNs on a model-level b
 
 ## Instructions to run code
 
-1. To run all jupyter notebooks of evaluation code, create a conda environment
+1. To run all jupyter notebooks, create a conda environment
    
    conda create --name env --file requirements.txt
    <br>
