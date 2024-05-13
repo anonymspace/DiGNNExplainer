@@ -14,7 +14,7 @@ Heterogeneous Graph Neural Networks</strong>, we explain GNNs on a model-level b
    jupyter notebook
 
 2. To run code for diffusion_graph_gen and diffusion_node_feature_gen, follow the installation steps of DiGress: https://github.com/cvignac/DiGress
-3. To run code for baseline_vae, follow the installation steps of https://github.com/deepfindr/gvae
+3. To run code for baseline_vae, refer to https://github.com/deepfindr/gvae
 4. Add references to code for the original and sampled graphs, and node features from the folder location:
    graph generator/diffusion models/ and,
    the sampled features for IMDB using TabDDPM from [here](https://drive.google.com/file/d/1cYWwO4WgfafH3G0bOw69DQsLAFUiJs-5/view?usp=sharing).
