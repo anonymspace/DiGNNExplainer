@@ -1,0 +1,5 @@
+name: imdb
+remove_h: null
+datadir: 'data/imdb/'
+node_class : 2
+node_feature_size : 2

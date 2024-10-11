@@ -1,0 +1,5 @@
+name: dblp
+remove_h: null
+datadir: 'data/dblp/'
+node_class : 0
+node_feature_size : 4
