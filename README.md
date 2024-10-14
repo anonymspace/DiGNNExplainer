@@ -95,9 +95,19 @@ The specifications of the machine used to run the code:
 	  ```
 	- Navigate to `diffusion_node_feature_gen` folder and run
           `python3 main.py`
- <br/>      		
-3. For node feature generation using TabDDPM refer to https://github.com/yandex-research/tab-ddpm.
+ <br/>
+ 
+3. To run code in `baseline_explainers`,
+- For `xgnn`, refer to https://github.com/divelab/DIG/tree/main/dig/xgraph/XGNN.
+- For `gnninterpreter`, follow the installation steps of https://github.com/yolandalalala/GNNInterpreter/tree/main and refer to https://github.com/MeneerTS/FACT2024_GNNInterpreter/tree/main/GNNInterpreter-Most-Recent-Version. 
+- For `d4explainer`, follow the installation steps of https://github.com/Graph-and-Geometric-Learning/D4Explainer/tree/main.
 
+ <br/>
+4. For node feature generation using TabDDPM refer to https://github.com/yandex-research/tab-ddpm.
+
+
+
+   
        
 ## Source of datasets
 - DBLP : https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.DBLP.html
@@ -106,6 +116,6 @@ The specifications of the machine used to run the code:
 - MUTAG : https://pytorch-geometric.readthedocs.io/en/2.6.0/generated/torch_geometric.datasets.TUDataset.html
 - BA-Shapes : https://docs.dgl.ai/en/1.1.x/generated/dgl.data.BAShapeDataset.html
 - Tree-Cycle : https://docs.dgl.ai/en/1.1.x/generated/dgl.data.TreeCycleDataset.html
-- Tree-Grids : hhttps://docs.dgl.ai/en/0.9.x/generated/dgl.data.TreeGridDataset.html
+- Tree-Grids : https://docs.dgl.ai/en/0.9.x/generated/dgl.data.TreeGridDataset.html
 - BA-3Motif : https://github.com/Wuyxin/ReFine/tree/main/data/BA3/raw
 
