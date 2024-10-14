@@ -103,5 +103,9 @@ The specifications of the machine used to run the code:
 - DBLP : https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.DBLP.html
 - PubMed : https://github.com/yangji9181/HNE/tree/master/Data
 - IMDB : https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.IMDB.html
-
+- MUTAG : https://pytorch-geometric.readthedocs.io/en/2.6.0/generated/torch_geometric.datasets.TUDataset.html
+- BA-Shapes : https://docs.dgl.ai/en/1.1.x/generated/dgl.data.BAShapeDataset.html
+- Tree-Cycle : https://docs.dgl.ai/en/1.1.x/generated/dgl.data.TreeCycleDataset.html
+- Tree-Grids : hhttps://docs.dgl.ai/en/0.9.x/generated/dgl.data.TreeGridDataset.html
+- BA-3Motif : https://github.com/Wuyxin/ReFine/tree/main/data/BA3/raw
 
