@@ -3,7 +3,7 @@ import os
 from datasets import  BA3Motif, Mutag, SynGraphDataset
 from datasets.dblp_dataset import DBLPDataset
 from datasets.imdb_dataset import IMDBDataset
-#from datasets.pubmed_dataset import PubMedDataset
+from datasets.pubmed_dataset import PubMedDataset
 
 
 def get_datasets(name, root="data/"):
@@ -39,11 +39,11 @@ def get_datasets(name, root="data/"):
         test_dataset = IMDBDataset(folder, mode="testing", name="imdb")
         val_dataset = IMDBDataset(folder, mode="evaluating", name="imdb")
         train_dataset = IMDBDataset(folder, mode="training", name="imdb")
-    # elif name == "pubmed":
-    #     folder = os.path.join(root)
-    #     test_dataset = PubMedDataset(folder, mode="testing", name="pubmed")
-    #     val_dataset = PubMedDataset(folder, mode="evaluating", name="pubmed")
-    #     train_dataset = PubMedDataset(folder, mode="training", name="pubmed")
+    elif name == "pubmed":
+        folder = os.path.join(root)
+        test_dataset = PubMedDataset(folder, mode="testing", name="pubmed")
+        val_dataset = PubMedDataset(folder, mode="evaluating", name="pubmed")
+        train_dataset = PubMedDataset(folder, mode="training", name="pubmed")
     elif name == "Tree_Cycle":
         folder = os.path.join(root)
         test_dataset = SynGraphDataset(folder, mode="testing", name="Tree_Cycle")

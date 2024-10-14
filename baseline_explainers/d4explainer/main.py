@@ -77,7 +77,9 @@ if args.dataset == 'imdb':
     CLASSES = [0, 1, 2]
 if args.dataset == 'pubmed':
     motifs_path = '../motifs_real/pubmed_10to15/'
-    CLASSES = [0, 1, 2, 3, 4, 5, 6, 7]
+    #CLASSES = [0, 1, 2, 3, 4, 5, 6, 7]
+    # classes 5 and 7 are mapped to 0 and 1
+    CLASSES = [0, 1]
 if args.dataset == 'BA_shapes':
     motifs_path = '../motifs_real/BAshapes_10to15/'
     CLASSES = [0, 1, 2, 3]

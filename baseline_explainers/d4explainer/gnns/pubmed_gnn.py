@@ -33,8 +33,8 @@ def parse_args():
     parser.add_argument("--cuda", type=int, default=0, help="GPU device.")
     parser.add_argument("--epoch", type=int, default=100, help="Number of epoch.")
     parser.add_argument("--lr", type=float, default=1e-3, help="Learning rate.")
-    parser.add_argument("--batch_size", type=int, default=128, help="Batch size.")
-    parser.add_argument("--hidden", type=int, default=128, help="hiden size.")
+    parser.add_argument("--batch_size", type=int, default=64, help="Batch size.")
+    parser.add_argument("--hidden", type=int, default=64, help="hiden size.")
     parser.add_argument("--verbose", type=int, default=10, help="Interval of evaluation.")
     parser.add_argument("--num_unit", type=int, default=3, help="number of Convolution layers(units)")
     parser.add_argument(
@@ -131,7 +131,8 @@ class PubMed_GCN(torch.nn.Module):
 if __name__ == "__main__":
     set_seed(44)
     args = parse_args()
-    device = torch.device(f"cuda:{args.cuda}" if torch.cuda.is_available() else "cpu")
+    device = 'cpu'
+    #device = torch.device(f"cuda:{args.cuda}" if torch.cuda.is_available() else "cpu")
     name = args.data_name
     file_dir = osp.join(osp.dirname(__file__), "..", "data", name, "processed/data.pt")
     data = torch.load(file_dir)
@@ -154,6 +155,8 @@ if __name__ == "__main__":
         model.train()
         optimizer.zero_grad()
         output = model(x=data.x, edge_index=data.edge_index)
+        # train_idx = data.y != -1
+        # loss_train = F.cross_entropy(output[train_idx], data.y[train_idx])
         loss_train = criterion(output[data.train_mask], data.y[data.train_mask])
         y_pred = torch.argmax(output, dim=1)
         acc_train = accuracy(y_pred[data.train_mask], data.y[data.train_mask])
@@ -166,21 +169,36 @@ if __name__ == "__main__":
             "time: {:.4f}s".format(time.time() - t),
         )
 
-    def eval():
-        model.eval()
-        output = model(x=data.x, edge_index=data.edge_index)
-        loss_test = criterion(output[data.test_mask], data.y[data.test_mask])
-        y_pred = torch.argmax(output, dim=1)
-        acc_test = accuracy(y_pred[data.test_mask], data.y[data.test_mask])
-        print("Test set results:", "loss= {:.4f}".format(loss_test.item()), "accuracy= {:.4f}".format(acc_test))
-        return loss_test, y_pred
+    # def eval():
+    #     model.eval()
+    #     output = model(x=data.x, edge_index=data.edge_index)
+    #     loss_test = criterion(output[data.test_mask], data.y[data.test_mask])
+    #     y_pred = torch.argmax(output, dim=1)
+    #     acc_test = accuracy(y_pred[data.test_mask], data.y[data.test_mask])
+    #     print("Test set results:", "loss= {:.4f}".format(loss_test.item()), "accuracy= {:.4f}".format(acc_test))
+    #     return loss_test, y_pred
 
+
+    #best_test_acc = 0
+    #start_patience = patience = 100
     for epoch in range(1, args.epoch + 1):
         train(epoch)
 
-        if epoch % args.verbose == 0:
-            loss_test, y_pred = eval()
-            scheduler.step(loss_test)
+        # if epoch % args.verbose == 0:
+        #     loss_test, y_pred, acc_test = eval()
+        #     scheduler.step(loss_test)
+        #
+        #     if (acc_test > best_test_acc):
+        #         patience = start_patience
+        #         best_test_acc = acc_test
+        #
+        #     else:
+        #         patience -= 1
+        #
+        #     if patience <= 0:
+        #         print('Stopping training as test accuracy did not improve '
+        #               f'for {start_patience} epochs')
+        #         break
 
     save_path = f"{name}_gcn.pt"
 
@@ -188,6 +206,6 @@ if __name__ == "__main__":
         os.makedirs(args.model_path)
     torch.save(model.cpu(), osp.join(args.model_path, save_path))
     labels = data.y[data.test_mask].cpu().numpy()
-    pred = y_pred[data.test_mask].cpu().numpy()
-    print("y_true counts: {}".format(np.unique(labels, return_counts=True)))
-    print("y_pred_orig counts: {}".format(np.unique(pred, return_counts=True)))
+    #pred = y_pred[data.test_mask].cpu().numpy()
+    # print("y_true counts: {}".format(np.unique(labels, return_counts=True)))
+    # print("y_pred_orig counts: {}".format(np.unique(pred, return_counts=True)))

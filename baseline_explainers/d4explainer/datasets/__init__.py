@@ -11,5 +11,6 @@ __all__ = [
     "Mutag",
     "DBLPDataset",
     "IMDBDataset",
+    "PubMedDataset",
     "SynGraphDataset",
 ]

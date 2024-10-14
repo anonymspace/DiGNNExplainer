@@ -31,7 +31,7 @@ class BA3Motif(InMemoryDataset):
     def download(self):
         if not osp.exists(osp.join(self.raw_dir, "raw", "BA-3motif.npy")):
             print(
-                "raw data of `BA-3motif.npy` doesn't exist, please redownload from our github."
+                "raw data of `BA-3motif.npy` doesn't exist, please redownload from https://github.com/Wuyxin/ReFine/tree/main/data/BA3/raw."
             )
             raise FileNotFoundError
 
