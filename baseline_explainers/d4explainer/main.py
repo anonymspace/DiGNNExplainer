@@ -152,6 +152,3 @@ for i in range(0,10):
     print('Run'+str(i),avg_fidelity)
     avg_fidelity_list.append(avg_fidelity)
 print(np.mean(avg_fidelity_list))
-
-
-
