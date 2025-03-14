@@ -63,7 +63,8 @@ The specifications of the machine used to run the code:
 
 - Run jupyter notebook:
  `jupyter notebook`
-
+ 
+- As an initial setup download the IMDB node features from [here](https://drive.google.com/file/d/1cYWwO4WgfafH3G0bOw69DQsLAFUiJs-5/view?usp=sharing) to `graph generator/diffusion models/sampled_features_diffusion/no_dependence/tabddpm/imdb`.<br/> 
 
 2. For graph generation and node feature generation,<br/>
 - To run `baseline_vae`:<br/>
