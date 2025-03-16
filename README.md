@@ -105,8 +105,11 @@ The specifications of the machine used to run the code:
 	  --config exp/author0/ddpm_cb_best/config.toml --train --sample
 	  ```
           
- <br/>      		
-
+     		
+3. To run code in `baseline_explainers`,
+- For `xgnn`, refer to [XGNN](https://github.com/divelab/DIG/tree/main/dig/xgraph/XGNN).<br/>
+- For `gnninterpreter`, follow the installation steps of [GNNInterpreter](https://github.com/yolandalalala/GNNInterpreter/tree/main) and refer to [FACT2024_GNNInterpreter](https://github.com/MeneerTS/FACT2024_GNNInterpreter/tree/main/GNNInterpreter-Most-Recent-Version). <br/>
+- For `d4explainer`, follow the installation steps of [D4Explainer](https://github.com/Graph-and-Geometric-Learning/D4Explainer/tree/main).<br/>
 
        
 ## Source of datasets
