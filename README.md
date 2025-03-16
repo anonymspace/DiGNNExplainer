@@ -57,7 +57,7 @@ The specifications of the machine used to run the code:
  3.  For `baseline_vae`, refer to https://github.com/deepfindr/gvae.
 
 ## Run code
-1. To run all jupyter notebooks, 
+1. To run all jupyter notebooks in `evaluation`, 
 - Activate conda environment:
  `conda activate DiGNNExplainer`
 
@@ -75,11 +75,11 @@ The specifications of the machine used to run the code:
 	  ```
    	 	`NODE_FEATURE_SIZE` is the size of all features of the dataset.<br/>
       
-	- Navigate to `baseline_vae` folder and run
+	- Navigate to `graph generator/baseline_vae` folder and run
        	 `python3 train.py`
    
 - To run `diffusion_graph_gen`:<br/>
-	- Specify dataset in `diffusion_graph_gen/configs/general/general_default.yaml`:
+	- Specify dataset in `graph generator/diffusion models/diffusion_graph_gen/configs/general/general_default.yaml`:
  
 	  ```
 	  dataset_name: 'dblp'
@@ -88,14 +88,14 @@ The specifications of the machine used to run the code:
 	   `python3 main.py`
 
  - To run `DiTabDDPM` for DBLP Author class:<br/>
- 	- Specify dataset in `configs/config.yaml`, and node class, node feature size in `diffusion_node_feature_gen/configs/dataset/dblp.yaml`:
+ 	- Specify dataset in `configs/config.yaml`, and node class, node feature size in `graph generator/diffusion models/DiTabDDPM/configs/dataset/dblp.yaml`:
     
 	  ```
 	  dataset: dblp
 	  node_class: 0
 	  node_feature_size: 4
 	  ```
-	- Navigate to `diffusion_node_feature_gen` folder and run
+	- Navigate to `DiTabDDPM` folder and run
           `python3 main.py`
           
  - To run original `TabDDPM` for DBLP Author class 0:<br/>
