@@ -60,7 +60,7 @@ The specifications of the machine used to run the code:
 1. To run experiments in Evaluation - Table 1, 
 - Navigate to `evaluation/main-paper/realistic_graphs/MMD` folder and run
   `python3 MMD_evaluation.py --dataset dblp`
-1. To run all jupyter notebooks in Evaluation - Table 2 (`evaluation/main-paper`) and additional experiments (`evaluation/supplementary`), 
+2. To run all jupyter notebooks in Evaluation - Table 2 (`evaluation/main-paper`) and additional experiments (`evaluation/supplementary`), 
 - Activate conda environment:
  `conda activate DiGNNExplainer`
 
@@ -69,7 +69,7 @@ The specifications of the machine used to run the code:
  
 - As an initial setup download the IMDB node features from [here](https://drive.google.com/file/d/1cYWwO4WgfafH3G0bOw69DQsLAFUiJs-5/view?usp=sharing) to `graph generator/diffusion models/sampled_features_diffusion/no_dependence/tabddpm/imdb`.<br/> 
 
-2. For graph generation and node feature generation,<br/>
+3. For graph generation and node feature generation,<br/>
 - To run `baseline_vae`:<br/>
 	- Specify node feature size, dataset in `baseline_vae/config.py` as: 
 	  ```
@@ -109,7 +109,7 @@ The specifications of the machine used to run the code:
 	  ```
           
      		
-3. To run code in `baseline_explainers`,
+4. To run code in `baseline_explainers`,
 - For `xgnn`, refer to [XGNN](https://github.com/divelab/DIG/tree/main/dig/xgraph/XGNN).<br/>
 - For `gnninterpreter`, follow the installation steps of [GNNInterpreter](https://github.com/yolandalalala/GNNInterpreter/tree/main) and refer to [FACT2024_GNNInterpreter](https://github.com/MeneerTS/FACT2024_GNNInterpreter/tree/main/GNNInterpreter-Most-Recent-Version). <br/>
 - For `d4explainer`, follow the installation steps of [D4Explainer](https://github.com/Graph-and-Geometric-Learning/D4Explainer/tree/main).<br/>
