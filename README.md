@@ -62,7 +62,7 @@ The specifications of the machine used to run the code:
   python3 MMD_evaluation.py --dataset dblp
   ```
   
-2. To run all jupyter notebooks, for evaluation Tables 2 and 3 in main paper (`evaluation/main-paper`), and additional experiments in supplementary material (`evaluation/supplementary`), 
+2. To run all jupyter notebooks, for evaluation Tables 2 and 3 in main paper (`evaluation/main-paper`), and experiments in supplementary material (`evaluation/supplementary`), 
 - Activate conda environment:
  `conda activate DiGNNExplainer`
 
