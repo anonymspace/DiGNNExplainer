@@ -234,8 +234,8 @@ class BaseGraphDataset(pyg.data.InMemoryDataset, ABC):
 
     @torch.no_grad()
     def mean_embeddings_nc(self, dataset, model, batch_size=32):
-        #for dblp,pubmed,imdb use node class+1 to for the class with -1 label
-        if dataset in ['dblp', 'pubmed', 'imdb']:
+        #for dblp,imdb use node class+1 to for the class with -1 label
+        if dataset in ['dblp', 'imdb']:
             embeds = [[] for _ in range(len(self.NODE_CLS)+1)]
         #for bashapes, tree-cycle, tree-grids use below code
         elif dataset in ['BA_shapes', 'TreeCycle', 'TreeGrids']:

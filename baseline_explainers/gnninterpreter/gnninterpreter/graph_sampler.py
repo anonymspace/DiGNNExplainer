@@ -221,8 +221,8 @@ class GraphSampler(nn.Module):
         E = self.sample_E(seed=seed, expected=expected)
 
         #Added for nc
-        # dblp, pubmed
-        if self.dataset in ['dblp', 'pubmed']:
+        # dblp
+        if self.dataset in ['dblp']:
             unique_labels = [0, 1, 2, 3, -1]
         #imdb
         elif self.dataset in ['imdb']:

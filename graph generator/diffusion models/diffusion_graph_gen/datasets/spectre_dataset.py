@@ -30,9 +30,7 @@ class SpectreGraphDataset(InMemoryDataset):
 
     def download(self):
         base_path = pathlib.Path(os.path.realpath(__file__)).parents[2]
-        # if self.dataset_name == 'ba3':
-        #     file_path = os.path.join(base_path, 'original_graphs/'+self.dataset_name +'/'+'class2.pt')
-        # else:
+
         file_path = os.path.join(base_path, 'original_graphs/'+self.dataset_name+'/'+str(self.node_size)+'.pt')
 
         adjs, node_types = torch.load(file_path)
@@ -77,9 +75,8 @@ class SpectreGraphDataset(InMemoryDataset):
         for data in raw_dataset:
             adj, node_types = data
             n = adj.shape[-1]
-            # For DBLP, PubMed, BAShapes, Ba3
-            #if self.dataset_name in ['dblp', 'pubmed', 'BA-Shapes', 'ba3']:
-            if self.dataset_name in ['dblp', 'pubmed', 'BA-Shapes']:
+            # For DBLP, BAShapes
+            if self.dataset_name in ['dblp', 'BA-Shapes']:
                 node_classes = [0, 1, 2, 3]
             # For IMDB
             elif self.dataset_name in ['imdb']:
@@ -141,9 +138,9 @@ class SpectreDatasetInfos(AbstractDatasetInfos):
         self.name = 'nx_graphs'
         self.n_nodes = self.datamodule.node_counts()
 
-        # For DBLP, PubMed, BAShapes
-        #if self.cfg.general.dataset_name in ['dblp', 'pubmed', 'BA-Shapes', 'ba3']:
-        if self.cfg.general.dataset_name in ['dblp', 'pubmed', 'BA-Shapes']:
+        # For DBLP, BAShapes
+        #if self.cfg.general.dataset_name in ['dblp', 'BA-Shapes']:
+        if self.cfg.general.dataset_name in ['dblp' 'BA-Shapes']:
             self.node_types = torch.tensor([0, 1, 2, 3])
         # For IMDB
         elif self.cfg.general.dataset_name in ['imdb']:
