@@ -56,7 +56,7 @@ The specifications of the machine used to run the code:
 1. To run experiments in evaluation Table 1 (in main paper), <br/>
 - Activate conda environment:
  `conda activate DiGNNExplainer` <br/>
-- Navigate to `evaluation/main-paper/realistic_graphs/MMD` folder and run the following command for each of the datasets - `dblp` `imdb` `mutag` `BA_shapes` `Tree_Cycle` `Tree_Grids` `ba3`. For `DBLP` run
+- Navigate to `evaluation/main-paper/realistic_graphs/MMD` folder and run the following command for each of the datasets - `dblp`,`imdb`,`mutag`,`BA_shapes`,`Tree_Cycle`,`Tree_Grids`,`ba3`. For `DBLP` run
 
   ```
   python3 MMD_evaluation.py --dataset dblp
