@@ -53,10 +53,14 @@ The specifications of the machine used to run the code:
  3.  For `baseline_vae`, refer to https://github.com/deepfindr/gvae.
 
 ## Run code
-1. To run experiments in Evaluation - Table 1, 
+1. To run experiments in Evaluation - Table 1, <br/>
+- Activate conda environment:
+ `conda activate DiGNNExplainer` <br/>
 - Navigate to `evaluation/main-paper/realistic_graphs/MMD` folder and run
-  <br/>
-  `python3 MMD_evaluation.py --dataset dblp`
+
+  ```
+  python3 MMD_evaluation.py --dataset dblp
+  ```
 2. To run all jupyter notebooks in Evaluation - Table 2 (`evaluation/main-paper`) and additional experiments (`evaluation/supplementary`), 
 - Activate conda environment:
  `conda activate DiGNNExplainer`
