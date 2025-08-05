@@ -45,10 +45,6 @@ The specifications of the machine used to run the code:
 
     `littleballoffur==2.3.1`
      
-     `pykeen`
-     
-     `easydict`
-     
      `rdkit`
 
     	
@@ -59,6 +55,7 @@ The specifications of the machine used to run the code:
 ## Run code
 1. To run experiments in Evaluation - Table 1, 
 - Navigate to `evaluation/main-paper/realistic_graphs/MMD` folder and run
+  <br/>
   `python3 MMD_evaluation.py --dataset dblp`
 2. To run all jupyter notebooks in Evaluation - Table 2 (`evaluation/main-paper`) and additional experiments (`evaluation/supplementary`), 
 - Activate conda environment:
