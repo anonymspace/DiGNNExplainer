@@ -1,0 +1,16 @@
+DEVICE = "cpu"
+
+NODE_TYPES = [0, 1, 2, 3]
+
+EDGE_TYPES = ["SINGLE"]
+
+NODE_FEATURE_SIZE = 50
+
+SAMPLES = 12
+
+BATCH_SIZE = 32
+
+EPOCHS = 100
+
+DATASET = "dblp"
+DIRECTORY = "real_dblp_vae"
