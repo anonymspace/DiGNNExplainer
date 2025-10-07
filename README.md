@@ -46,6 +46,10 @@ The specifications of the machine used to run the code:
     `littleballoffur==2.3.1`
      
      `rdkit`
+     
+     `pyemd==1.0.0`
+     
+     `easydict==1.13`
 
     	
  2.  For `diffusion_graph_gen` and `DiTabDDPM` create a conda enviroment by following the installation steps of DiGress: https://github.com/cvignac/DiGress.  <br/>
